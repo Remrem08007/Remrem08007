@@ -44,6 +44,23 @@ Highlights:
 
 The synthetic validation covers two SNPs and one 2-bp insertion and is explicitly workflow validation rather than clinical validation or an accuracy benchmark.
 
+### [Bioinformatics HPC Toolkit](https://github.com/Remrem08007/bioinformatics-hpc-toolkit)
+
+A dependency-light **research-computing toolkit for safer, more reproducible bioinformatics work on HPC systems**.
+
+Highlights:
+- environment and submission preflight checks with `hpc-preflight`
+- SLURM accounting summaries and conservative resource-sizing diagnostics
+- FASTQ/VCF structure checks and BAM/CRAM `samtools quickcheck` integration
+- pre-staged Apptainer/Singularity container verification
+- storage and Alliance `diskusage_report` reporting
+- dry-run-first Nextflow work cleanup with refusal guards
+- generic HPC project initialization and SLURM/Nextflow templates
+- Python standard-library-first implementation with CI and test fixtures
+- **validated on Alliance Canada's Narval cluster: 14/14 tests and live CLI/environment smoke checks passed**
+
+The toolkit is intentionally cluster- and study-agnostic and keeps destructive operations conservative by default.
+
 ### [CQDG De Novo Variant Pipeline](https://github.com/Remrem08007/cqdg-denovo-pipeline)
 
 A reusable **Nextflow genomics workflow** for family-based de novo variant analysis.
