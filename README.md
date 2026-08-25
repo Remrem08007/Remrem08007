@@ -26,6 +26,24 @@ Highlights:
 
 The repository is deliberately generic: no lab-specific paths, sample conventions, scheduler accounts, or study-specific interpretation logic are built into the workflow.
 
+### [Germline Variant HPC Workflow](https://github.com/Remrem08007/germline-variant-hpc-workflow)
+
+A generic **Nextflow DSL2 germline short-variant workflow** for paired-end sequencing data on HPC systems.
+
+Highlights:
+- FastQC + fastp preprocessing
+- BWA-MEM2 alignment with coordinate-sorted, indexed BAM output
+- GATK duplicate marking and optional BQSR
+- HaplotypeCaller in GVCF mode followed by GenotypeGVCFs
+- separate configurable SNP and INDEL hard filtering
+- bcftools variant statistics and Nextflow execution reports
+- SLURM execution with pre-staged Apptainer / Singularity containers
+- restricted-network / offline-friendly HPC execution
+- deterministic 4 kb diploid truth fixture with 60 paired fragments
+- **validated end-to-end on Alliance Canada's Narval cluster: 3/3 truth variants recovered, all `PASS` with expected heterozygous genotypes**
+
+The synthetic validation covers two SNPs and one 2-bp insertion and is explicitly workflow validation rather than clinical validation or an accuracy benchmark.
+
 ### [CQDG De Novo Variant Pipeline](https://github.com/Remrem08007/cqdg-denovo-pipeline)
 
 A reusable **Nextflow genomics workflow** for family-based de novo variant analysis.
@@ -64,7 +82,7 @@ The workflow supports:
 
 **Languages:** Python · Bash · C++ · JavaScript · SQL  
 **Workflow & HPC:** Nextflow · SLURM · Linux · Apptainer / Singularity · Docker  
-**Bioinformatics:** GATK · VEP · STAR · samtools · Kraken2 · Kaiju · BLAST  
+**Bioinformatics:** GATK · VEP · BWA-MEM2 · STAR · samtools · bcftools · fastp · Kraken2 · Kaiju · BLAST  
 **Engineering:** Git · CI/testing · reproducible environments · workflow validation
 
 ## 🧪 Selected experience
