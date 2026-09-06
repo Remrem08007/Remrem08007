@@ -8,6 +8,24 @@ My background combines bioinformatics, software engineering, statistics, and hig
 
 ## 🔬 Featured projects
 
+### [TCGA RNA-seq Cancer Classification](https://github.com/Remrem08007/tcga-rnaseq-ml)
+
+A leakage-resistant, interpretable **ten-class cancer classification study** using
+batch-corrected TCGA PanCancer RNA-seq data from 4,599 participants.
+
+Highlights:
+- deterministic participant-level 80/20 development/holdout split
+- fold-local imputation, feature selection, and scaling throughout cross-validation
+- selected 5,000-gene multinomial elastic net from a 20-to-all-gene budget study
+- stable feature selection: 4,734 genes selected in all five development folds
+- **one-time 920-participant frozen holdout: macro F1 0.9808, balanced accuracy 0.9801, accuracy 0.9815**
+- development-only LUAD/LUSC and KIRC/KIRP error studies
+- XGBoost CPU/CUDA benchmarking with verified GPU execution and approximately 4.9× measured acceleration
+- SLURM batch templates, progress reporting, provenance, SHA-256 locking, and Python 3.11/3.12 CI
+
+This is a retrospective research-use case study, not prospective or clinical
+diagnostic validation. Public documentation contains aggregate results only.
+
 ### [Metagenomics HPC Workflow](https://github.com/Remrem08007/metagenomics-hpc-workflow)
 
 A reusable **Nextflow DSL2 workflow for host depletion and broad non-human taxonomic screening** of paired-end sequencing data.
